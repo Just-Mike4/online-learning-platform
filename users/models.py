@@ -11,3 +11,4 @@ class CustomUser(AbstractUser):
     )
     id= models.UUIDField(db_index=True, default=uuid.uuid4, editable=False, primary_key=True)
     role=models.CharField(max_length=255,choices=ROLE_CHOICES)
+    email=models.CharField(max_length=255)
